@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Audio Player</title>
+    <style>
+        #audioPlayer {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background: #f9f9f9;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div id="audioPlayer">
+        <audio id="udioPlayer" controls>
+            <source src="audio/Bases_Anthem_Higher_Together.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <div id="controls">
+            <button onclick="document.getElementById('udioPlayer').play()">Play</button>
+            <button onclick="document.getElementById('udioPlayer').pause()">Pause</button>
+            <button onclick="volumeUp()">Volume +</button>
+            <button onclick="volumeDown()">Volume -</button>
+        </div>
+    </div>
+    <script>
+        function volumeUp() {
+            const audio = document.getElementById('udioPlayer');
+            if (audio.volume < 1) audio.volume += 0.1;
+        }
+
+        function volumeDown() {
+            const audio = document.getElementById('udioPlayer');
+            if (audio.volume > 0) audio.volume -= 0.1;
+        }
+    </script>
+</body>
+</html>

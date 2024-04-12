@@ -1,0 +1,22 @@
+#audioPlayer {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: #f9f9f9;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.8;
+}
